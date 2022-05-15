@@ -1,0 +1,31 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+bases:
+- ../../../base/v1
+
+namespace: wave-picking-dev
+
+commonLabels:
+  app: wave-picking
+  version: v1
+  environment: dev
+
+
+namePrefix: dev-
+nameSuffix: -v1
+
+replicas:
+- name: wave-picking
+  count: 3
+
+images:
+  - name: app-image
+    newName: mendhak/http-https-echo
+    newTag: "23"
+
+patchesStrategicMerge:
+  - resources_limit.yaml
+
+resources:
+  - configmap.yaml
+  - secrets.yaml

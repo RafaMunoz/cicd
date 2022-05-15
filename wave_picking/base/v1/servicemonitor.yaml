@@ -1,0 +1,10 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata: 
+   name: wave-picking
+spec:
+  selector:
+    matchLabels:
+      app: wave-picking
+  endpoints:
+  - port: http
