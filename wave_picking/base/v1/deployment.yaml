@@ -26,7 +26,6 @@ spec:
           periodSeconds: 10
           timeoutSeconds: 1
           failureThreshold: 3
-          #successThreshold: 2
 
 
 
