@@ -16,12 +16,12 @@ nameSuffix: -v1
 
 replicas:
 - name: wave-picking
-  count: 5
+  count: 3
 
 images:
   - name: app-image
     newName: mendhak/http-https-echo
-    newTag: "23"
+    newTag: "21"
 
 patchesStrategicMerge:
   - resources_limit.yaml
