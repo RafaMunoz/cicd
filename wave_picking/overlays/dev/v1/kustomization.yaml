@@ -21,7 +21,7 @@ replicas:
 images:
   - name: app-image
     newName: mendhak/http-https-echo
-    newTag: "22"
+    newTag: "21"
 
 patchesStrategicMerge:
   - resources_limit.yaml
