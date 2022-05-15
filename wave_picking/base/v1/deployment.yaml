@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: wave-picking
 spec:
+  revisionHistoryLimit: 1
   template:
     spec:
       containers:
