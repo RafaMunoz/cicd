@@ -16,7 +16,7 @@ nameSuffix: -v1
 
 replicas:
 - name: wave-picking
-  count: 3
+  count: 5
 
 images:
   - name: app-image
